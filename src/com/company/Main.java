@@ -5,45 +5,46 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        BankAccount cust1= new BankAccount("Joan", "1234", 57000);
-        cust1.deposit(57000);
+        BankAccount cust1= new BankAccount("Joan", "1234", 0.00);
 
-        BankAccount cust2 = new BankAccount("Lori", "2345", 57000);
-        cust2.deposit(57000);
+        BankAccount cust2 = new BankAccount("Lori", "2345", 0.00);
 
-        BankAccount cust3 = new BankAccount("Koddie", "3456", 57000);
-        cust3.deposit(57000);
+        BankAccount cust3 = new BankAccount("Koddie", "3456", 0.00);
 
-        BankAccount cust4 = new BankAccount("Kym", "4567", 57000);
-        cust4.deposit(57000);
+        BankAccount cust4 = new BankAccount("Kym", "4567", 0.00);
 
-        BankAccount cust5 = new BankAccount("Ted", "5678", 57000);
-        cust5.deposit(57000);
+        BankAccount cust5 = new BankAccount("Ted", "5678", 0.00);
 
-        BankAccount cust6 = new BankAccount("Mark", "6789", 57000);
-        cust6.deposit(57000);
+        BankAccount cust6 = new BankAccount("Mark", "6789", 0.00);
 
-        BankAccount cust7 = new BankAccount("Jake", "9876", 57000);
-        cust7.deposit(57000);
+        BankAccount cust7 = new BankAccount("Jake", "9876", 0.00);
 
-        BankAccount cust8 = new BankAccount("Zech", "8765", 57000);
-        cust8.deposit(57000);
+        BankAccount cust8 = new BankAccount("Zech", "8765", 0.00);
 
-        BankAccount cust9 = new BankAccount("Manny", "7654", 57000);
-        cust9.deposit(57000);
+        BankAccount cust9 = new BankAccount("Manny", "7654", 0.00);
 
-        System.out.println(cust1.accountHolderName + "'s Account Balance is:$" + cust1.balance);
-        System.out.println(cust2.accountHolderName + "'s Account Balance is:$" + cust2.balance);
-        System.out.println(cust3.accountHolderName + "'s Account Balance is:$" + cust3.balance);
-        System.out.println(cust4.accountHolderName + "'s Account Balance is:$" + cust4.balance);
-        System.out.println(cust5.accountHolderName + "'s Account Balance is:$" + cust5.balance);
-        System.out.println(cust6.accountHolderName + "'s Account Balance is:$" + cust6.balance);
-        System.out.println(cust7.accountHolderName + "'s Account Balance is:$" + cust7.balance);
-        System.out.println(cust8.accountHolderName + "'s Account Balance is:$" + cust8.balance);
-        System.out.println(cust9.accountHolderName + "'s Account Balance is:$" + cust9.balance);
+        BankAccount cust10 = new BankAccount("Scott", "6543", 0.00);
+
+        BankAccount cust11 = new BankAccount("Estella", "9394");
+
+        BankAccount cust12 = new BankAccount("8565");
 
 
+        // Create an Array
+        BankAccount[]listOfAccounts = {cust1, cust2, cust3, cust4, cust5, cust6, cust7, cust8, cust9, cust10, cust11, cust12};
+
+            for (int i = 0; i < listOfAccounts.length; i++) {
+            listOfAccounts[i].deposit(57000);
+                System.out.println(listOfAccounts[i].balance);
+
+        }
+
+        for (BankAccount specificAccount : listOfAccounts){
+            System.out.println(specificAccount.accountHolderName);
+            System.out.println("BONUS DAY!!!");
+                specificAccount.deposit(500);
+            System.out.println(specificAccount);
     }
 
 
-}
+}}
